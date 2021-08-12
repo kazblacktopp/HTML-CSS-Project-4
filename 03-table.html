@@ -9,7 +9,7 @@
       rel="stylesheet"
     />
     <script src="accordion.js"></script>
-    <title>Accordion Component</title>
+    <title>Table Component</title>
 
     <style>
       /*
@@ -41,7 +41,71 @@
         font-size: 1.6rem;
         line-height: 1;
       }
+
+      table {
+        width: 80rem;
+        margin: 9.6rem auto;
+        border-collapse: collapse;
+        font-size: 1.8rem;
+      }
+
+      thead th {
+        background-color: var(--color-primary);
+        color: #fff;
+        width: 25%;
+      }
+
+      tbody tr:nth-child(odd) {
+        background-color: #f8f9fa;
+      }
+
+      tbody tr:nth-child(even) {
+        background-color: #e9ecef;
+      }
+
+      th,
+      td {
+        text-align: left;
+        padding: 1.6rem 2.4rem;
+      }
     </style>
   </head>
-  <body></body>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th scope="row">Chair</th>
+          <th scope="col">The Laid Back</th>
+          <th scope="col">The Worker Bee</th>
+          <th scope="col">The Chair 4/2</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Width</th>
+          <td>80 cm</td>
+          <td>60 cm</td>
+          <td>220 cm</td>
+        </tr>
+        <tr>
+          <th scope="row">Height</th>
+          <td>100 cm</td>
+          <td>110 cm</td>
+          <td>90 cm</td>
+        </tr>
+        <tr>
+          <th scope="row">Depth</th>
+          <td>70 cm</td>
+          <td>65 cm</td>
+          <td>80 cm</td>
+        </tr>
+        <tr>
+          <th scope="row">Weight</th>
+          <td>16 kg</td>
+          <td>22 kg</td>
+          <td>80 kg</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
 </html>
