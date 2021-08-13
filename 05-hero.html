@@ -4,12 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <script src="accordion.js"></script>
-    <title>Accordion Component</title>
+    <title>Hero Section</title>
 
     <style>
       /*
@@ -21,7 +22,6 @@
       */
 
       :root {
-        --color-primary: #087f5b;
         --color-grey: #343a40;
       }
 
@@ -36,12 +36,115 @@
       }
 
       body {
-        font-family: "Inter", sans-serif;
-        color: var(--color-grey);
+        font-family: "Rubik", sans-serif;
         font-size: 1.6rem;
         line-height: 1;
+        color: var(--color-grey);
+      }
+
+      header {
+        height: 100vh;
+        background: linear-gradient(
+            rgba(34, 34, 34, 0.6),
+            rgba(34, 34, 34, 0.6)
+          ),
+          url(hero.jpg) top center/cover;
+        color: #fff;
+        position: relative;
+      }
+
+      section {
+        padding: 9.6rem 0;
+        background-color: #f7f7f7;
+      }
+
+      nav {
+        height: 9.6rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 2rem;
+        font-weight: 700;
+      }
+
+      h1 {
+        font-size: 5.2rem;
+        margin-bottom: 3.2rem;
+      }
+
+      h2 {
+        font-size: 4.4rem;
+        margin-bottom: 4.8rem;
+      }
+
+      p {
+        font-size: 2rem;
+        line-height: 1.6;
+        margin-bottom: 4.8rem;
+      }
+
+      .container {
+        width: 90%;
+        max-width: 120rem;
+        margin: 0 auto;
+      }
+
+      .header-container {
+        width: 90%;
+        max-width: 120rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .header-container--inner {
+        width: 50%;
+        min-width: 35rem;
+      }
+
+      .btn {
+        font-size: 2rem;
+        font-weight: 600;
+        text-decoration: none;
+        background-color: #e67e22;
+        padding: 1.6rem 3.2rem;
+        display: inline-block;
+        border-radius: 1rem;
+        color: #fff;
       }
     </style>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <nav class="container">
+        <div>LOGO</div>
+        <div>NAVIGATION</div>
+      </nav>
+      <div class="header-container">
+        <div class="header-container--inner">
+          <h1>A healty meal delivered to your door, every single day</h1>
+          <p>
+            The smart 365-days-per-year food subscription that will make you eat
+            healty again. Tailored to your personal tastes and nutritional needs
+          </p>
+          <a class="btn" href="#">Start eating well</a>
+        </div>
+      </div>
+    </header>
+    <section>
+      <div class="container">
+        <h2>Some random heading</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque quas,
+          minus beatae sapiente debitis voluptatum, laudantium veritatis impedit
+          corrupti officia recusandae fugit, voluptates iure velit! Ad suscipit
+          vitae nobis optio. Lorem ipsum dolor sit, amet consectetur adipisicing
+          elit. Reiciendis sequi quam earum voluptas eum laboriosam at
+          cupiditate debitis in odio adipisci repudiandae enim ea, sint quos
+          similique! Debitis, facilis dolore?
+        </p>
+      </div>
+    </section>
+  </body>
 </html>
