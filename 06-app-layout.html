@@ -5,34 +5,128 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style></style>
+    <style>
+      /*
+      SPACING SYSTEM (px)
+      2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+      FONT SIZE SYSTEM (px)
+      10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+      */
+
+      :root {
+        --color-bg-nav: #343a40;
+        --color-bg-menu: #7048e8;
+        --color-bg-btn: #5f3dc4;
+        --color-bg-btn-trash: #d6336c;
+        --color-bg-email: #adb5bd;
+        --color-bg-grey-light: #e9ecef;
+        --color-text-light: #fff;
+        --color-text-dark: #222;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: 62.5%;
+      }
+
+      body {
+        color: var(--color-text-dark);
+        height: 100vh;
+        display: grid;
+        grid-template: 8rem 1fr / 8rem 40rem 1fr 25rem;
+        font-size: 2.4rem;
+        font-family: Helvetica, sans-serif;
+        font-weight: 700;
+        text-align: center;
+      }
+
+      nav {
+        grid-row: 1 / -1;
+        background-color: var(--color-bg-nav);
+        color: var(--color-text-light);
+      }
+
+      menu {
+        grid-column: 2 / -1;
+        background-color: var(--color-bg-menu);
+        display: flex;
+        gap: 1.2rem;
+        align-items: center;
+        padding: 0 4rem;
+      }
+
+      section {
+        background-color: var(--color-bg-grey-light);
+        overflow: scroll;
+        padding: 4rem;
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+      }
+
+      aside {
+        background-color: var(--color-bg-grey-light);
+      }
+
+      nav,
+      main,
+      aside {
+        padding-top: 2.4rem;
+      }
+
+      button {
+        color: var(--color-text-light);
+        background-color: var(--color-bg-btn);
+        font-size: 1.6rem;
+        font-weight: 700;
+        border: none;
+        padding: 0.8rem 1.2rem;
+        cursor: pointer;
+      }
+
+      button:last-child {
+        background-color: var(--color-bg-btn-trash);
+        margin-left: auto;
+      }
+
+      .email {
+        background-color: var(--color-bg-email);
+        height: 9.6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+    </style>
   </head>
   <body>
+    <nav>Nav</nav>
+    <menu>
+      <button>New</button>
+      <button>Reply</button>
+      <button>Forward</button>
+      <button>Mark unread</button>
+      <button class="trash">Trash</button>
+    </menu>
     <section>
-      <nav>
-        <div>Nav</div>
-      </nav>
-      <menu>
-        <button>New</button>
-        <button>Reply</button>
-        <button>Forward</button>
-        <button>Mark unread</button>
-        <button>Trash</button>
-      </menu>
-      <div>
-        <div class="email"></div>
-        <div class="email"></div>
-        <div class="email"></div>
-        <div class="email"></div>
-        <div class="email"></div>
-        <div class="email"></div>
-        <div class="email"></div>
-        <div class="email"></div>
-        <div class="email"></div>
-        <div class="email"></div>
-      </div>
-      <div>Email view</div>
-      <div>Additional info</div>
+      <div class="email">Email 1</div>
+      <div class="email">Email 2</div>
+      <div class="email">Email 3</div>
+      <div class="email">Email 4</div>
+      <div class="email">Email 5</div>
+      <div class="email">Email 6</div>
+      <div class="email">Email 7</div>
+      <div class="email">Email 8</div>
+      <div class="email">Email 9</div>
+      <div class="email">Email 10</div>
     </section>
+    <main>Email view</main>
+    <aside>Additional info</aside>
   </body>
 </html>
